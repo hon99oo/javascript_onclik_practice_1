@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function setColor(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = color;
+        i++;
+      }
+    }
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value = 'day';
+        setColor('powderblue');
+      }
+      else{
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value = 'night';
+        setColor('blue');
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1><a href="1.html">WEB</a></h1>
+  <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
+  <ol>
+    <script>
+      var category = ['HTML', 'CSS', 'JavaScript']
+      var i = 0;
+      var len = category.length;
+      while(i<len)
+      {
+        document.write('<li><a href="1.html">'+category[i]+'</a></li>');
+        i++;
+      }
+    </script>
+  </ol>
+  <h2>JavaScirpt</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quidem, recusandae ab! Repudiandae officiis nesciunt, dignissimos, doloribus cupiditate similique distinctio modi optio! Minus eius qui, id explicabo officiis, quas ipsum cumque fugit, commodi repellendus est culpa aliquam totam modi maiores voluptates iure quae et laborum. Tenetur dignissimos corrupti omnis, mollitia!</p>
+</body>
+</html>
